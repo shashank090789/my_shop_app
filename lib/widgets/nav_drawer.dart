@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide/screens/topics_screen.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -15,7 +16,9 @@ class NavDrawer extends StatelessWidget {
             leading: Icon(Icons.shop),
             title: Text('Shop'),
             onTap: () {
-             
+             Navigator.of(context).push(MaterialPageRoute(builder: (_){
+               return TopicsScreen();
+             }));
             },
           ),
           Divider(),
